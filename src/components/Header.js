@@ -78,6 +78,7 @@ function Header({ children }) {
       >
         <Toolbar>
           <IconButton
+          hover='none'
             size="large"
             edge="start"
             color="inherit"
@@ -97,9 +98,9 @@ function Header({ children }) {
             />
           </Search>
 
-          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ flexGrow: 1}} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" >
+            <IconButton  aria-label="show 4 new mails" >
               <Arroecross />
             </IconButton>
             <IconButton

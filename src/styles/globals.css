@@ -12,3 +12,6 @@ body {
 .active p{
   display: inline-block !important;
 }
+button:hover{
+  background-color: transparent !important;
+}
