@@ -5,19 +5,19 @@ import PersionIcon from '../assets/icons/PersionIcon'
 
 import styles from '../styles/card.module.css'
 
-const CustromCard = () => {
+const CustromCard = ({icon,title,amount,color,colorlight}) => {
 
 
     return (
         <Card className={styles.main}>
             <CardContent>
                 <div className={styles.cardwrapper}>
-                    <div className={styles.persion}>
-                    <PersionIcon/>
+                    <div className={styles.persion} style={{backgroundColor:colorlight}}>
+                    {icon}
                     </div>
                     <div className={styles.textwrapper}>
-                        <p>New Leds</p>
-                        <span>102</span>
+                        <p>{title}</p>
+                        <span style={{color:color}}>{amount}</span>
                     </div>
                 </div>
             </CardContent>

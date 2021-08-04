@@ -23,10 +23,9 @@ const CustromDrawer = () => {
     return (
         <div className={styles.root}>
             <Toolbar >
-                <h2 className={styles.banner}>Gull</h2>
+                <Link href="/"><h2 className={styles.banner}>Gull</h2></Link>
             </Toolbar>
             <List className={`${styles.lists}`}>
-                {/* <div className={styles.active}> */}
                 <Link href="/">
                     <ListItem button className={isActive('/')}>
                         <DashboardIcon />
