@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
-
+import Container from '@material-ui/core/Container';
 import CustromCard from '../components/CustromCard'
 import Grid from '@material-ui/core/Grid';
 
 export default function Home() {
   return (
-    < >
+    <Container >
      <Grid container>
      <Grid item xs={3} md={3} sm={12}>
         <CustromCard />
@@ -21,6 +21,6 @@ export default function Home() {
         <CustromCard />
       </Grid>
      </Grid>
-    </>
+    </Container>
   )
 }

@@ -4,3 +4,7 @@ body {
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
 }
+
+.active{
+  background: #7D48B1 !important;
+}
