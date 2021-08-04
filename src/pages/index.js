@@ -38,7 +38,7 @@ const data = [
 ]
 export default function Home() {
   return (
-    <Container >
+    < >
       <Grid container>
         {
           data && data.map((item) => {
@@ -68,6 +68,6 @@ export default function Home() {
           <CustromCard />
         </Grid> */}
       </Grid>
-    </Container>
+    </>
   )
 }

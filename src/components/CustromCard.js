@@ -1,7 +1,6 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import PersionIcon from '../assets/icons/PersionIcon'
 
 import styles from '../styles/card.module.css'
 
