@@ -6,6 +6,9 @@ body {
   background: #F1F3F4;
 }
 
-.active{
+.active {
   background: #7D48B1 !important;
+}
+.active p{
+  display: inline-block !important;
 }
