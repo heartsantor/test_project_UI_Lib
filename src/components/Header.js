@@ -7,37 +7,31 @@ import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 
 import Avatar from '@material-ui/core/Avatar';
 
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
-
-import SearchIcon from '@material-ui/icons/Search';
-import MailIcon from '@material-ui/icons/Mail';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-
-
 import CustromDrawer from './CustromDrawer'
 import avater from '../assets/icons/avater.png'
+import BellIcon from '../assets/icons/BellIcon'
+import Arroecross from '../assets/icons/Arroecross'
+import SearchIcon from '../assets/icons/SearchIcon'
+import MenuIcon from '../assets/icons/MenuIcon'
 
 const drawerWidth = 120;
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
+  borderRadius: '20px',
+  backgroundColor: alpha(theme.palette.common.white, 1),
+  marginRight: theme.spacing(1),
   marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(3),
-    width: 'auto',
+    width: '503px',
   },
 }));
 
@@ -106,28 +100,31 @@ function Header({ children }) {
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-              <Badge badgeContent={4} color="error">
-                <MailIcon />
+            <IconButton size="large" aria-label="show 4 new mails" >
+              <Arroecross />
+            </IconButton>
+            <IconButton
+              size="large"
+              aria-label="show 3 new notifications"
+              color="inherit"
+            >
+              <Badge badgeContent={3} color="primary" size='small'>
+                <BellIcon />
               </Badge>
             </IconButton>
             <IconButton
               size="large"
-              aria-label="show 17 new notifications"
+              aria-label="show 3 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
+              <Avatar variant="rounded" size="large" style={{ background: 'transparent', boxShadow: 'none' }}>
+                <Image
+                  src={avater}
+                  alt=""
+                />
+              </Avatar>
             </IconButton>
-            <Avatar variant="rounded" >
-              <Image
-                src={avater}
-                alt=""
-                // width={500}
-                // height={500}
-              />
-            </Avatar>
+
           </Box>
         </Toolbar>
       </AppBar>
@@ -140,7 +137,7 @@ function Header({ children }) {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { width: drawerWidth , background: '#663399'},
+            '& .MuiDrawer-paper': { width: drawerWidth, background: '#663399' },
           }}
         >
           <CustromDrawer />
