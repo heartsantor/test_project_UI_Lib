@@ -1,39 +1,48 @@
-import * as React from 'react';
-import Divider from '@material-ui/core/Divider';
+
+import Link from 'next/link'
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Toolbar from '@material-ui/core/Toolbar';
 
 import HomeIcon from '../assets/icons/HomeIcon'
+import DashboardIcon from '../assets/icons/DashboardIcon'
+import TableIcon from '../assets/icons/TableIcon'
+import ClipIcon from '../assets/icons/ClipIcon'
+import DocumentsIcon from '../assets/icons/DocumentsIcon'
 
-// const useStyles = makeStyles((theme) => ({
-//     root: {
-//         display: 'flex',
-//     },
-//     appbarcontent:{
-//         display: 'flex',
-//         justifyContent:'center',
-//         flexDirection:'column',
-//         alignItems:'center'
-//     }
-// }));
-
-
-
+import styles from '../styles/drower.module.css'
 const CustromDrawer = () => {
 
     return (
-        <div >
+        <div className={styles.root}>
             <Toolbar >
-                <h2>Gull</h2>
+                <h2 className={styles.banner}>Gull</h2>
             </Toolbar>
-            <List>
-                <ListItem button >
-                    <HomeIcon />
-                </ListItem>
-                <ListItem button >
-                    <p>hlww</p>
-                </ListItem>
+            <List className={styles.lists}>
+                <Link href="/">
+                    <ListItem button >
+                        <DashboardIcon />
+                        <p>DashBoard</p>
+                    </ListItem>
+                </Link>
+                <Link href="/table">
+                    <ListItem button >
+                        <TableIcon />
+                        <p>Table</p>
+                    </ListItem>
+                </Link>
+                <Link href="/clipboard">
+                    <ListItem button >
+                        <ClipIcon />
+                        <p>ClipBoard</p>
+                    </ListItem>
+                </Link>
+                <Link href="/clipboard">
+                    <ListItem button >
+                        <DocumentsIcon />
+                        <p>Documents</p>
+                    </ListItem>
+                </Link>
             </List>
         </div>
     )

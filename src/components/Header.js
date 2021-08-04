@@ -1,4 +1,6 @@
-import * as React from 'react';
+import Image from 'next/image'
+
+import { styled, alpha } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
@@ -7,20 +9,16 @@ import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
+
 import Avatar from '@material-ui/core/Avatar';
-import { styled, alpha } from '@material-ui/core/styles';
+
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
+
 import SearchIcon from '@material-ui/icons/Search';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import MoreIcon from '@material-ui/icons/MoreVert';
-import { makeStyles } from '@material-ui/core/styles';
-import {  green } from '@material-ui/core/colors';
+
 
 import CustromDrawer from './CustromDrawer'
 import avater from '../assets/icons/avater.png'
@@ -122,7 +120,14 @@ function Header({ children }) {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <Avatar variant="rounded" src={avater}/>
+            <Avatar variant="rounded" >
+              <Image
+                src={avater}
+                alt=""
+                // width={500}
+                // height={500}
+              />
+            </Avatar>
           </Box>
         </Toolbar>
       </AppBar>
@@ -135,7 +140,7 @@ function Header({ children }) {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { width: drawerWidth },
+            '& .MuiDrawer-paper': { width: drawerWidth , background: '#663399'},
           }}
         >
           <CustromDrawer />
