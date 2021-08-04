@@ -41,7 +41,7 @@ export default function Home() {
     < >
       <Grid container>
         {
-          data && data.map((item,i) => {
+          data && data.map((item, i) => {
             return (
               <Grid item xs={3} md={3} sm={12} key={i}>
                 <CustromCard
@@ -55,18 +55,6 @@ export default function Home() {
             )
           })
         }
-        {/* <Grid item xs={3} md={3} sm={12}>
-          <CustromCard />
-        </Grid>
-        <Grid item xs={3} md={3} sm={12}>
-          <CustromCard />
-        </Grid>
-        <Grid item xs={3} md={3} sm={12}>
-          <CustromCard />
-        </Grid>
-        <Grid item xs={3} md={3} sm={12}>
-          <CustromCard />
-        </Grid> */}
       </Grid>
     </>
   )

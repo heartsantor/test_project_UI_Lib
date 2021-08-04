@@ -8,7 +8,7 @@ const CustromCard = ({icon,title,amount,color,colorlight}) => {
 
 
     return (
-        <Card className={styles.main}>
+        <Card className={styles.main} style={{ boxShadow: 'none' }}>
             <CardContent>
                 <div className={styles.cardwrapper}>
                     <div className={styles.persion} style={{backgroundColor:colorlight}}>
