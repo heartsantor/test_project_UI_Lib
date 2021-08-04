@@ -1,12 +1,26 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import Button from '@material-ui/core/Button';
+import CustromCard from '../components/CustromCard'
+import Grid from '@material-ui/core/Grid';
 
 export default function Home() {
   return (
-    <div >
-     <Button variant="contained">Hello World</Button>
-    </div>
+    < >
+     <Grid container>
+     <Grid item xs={3} md={3} sm={12}>
+        <CustromCard />
+      </Grid>
+      <Grid item xs={3} md={3} sm={12}>
+        <CustromCard />
+      </Grid>
+      <Grid item xs={3} md={3} sm={12}>
+        <CustromCard />
+      </Grid>
+      <Grid item xs={3} md={3} sm={12}>
+        <CustromCard />
+      </Grid>
+     </Grid>
+    </>
   )
 }

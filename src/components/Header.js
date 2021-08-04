@@ -8,7 +8,7 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-
+import Avatar from '@material-ui/core/Avatar';
 import { styled, alpha } from '@material-ui/core/styles';
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
@@ -19,8 +19,11 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { makeStyles } from '@material-ui/core/styles';
+import {  green } from '@material-ui/core/colors';
 
 import CustromDrawer from './CustromDrawer'
+import avater from '../assets/icons/avater.png'
 
 const drawerWidth = 120;
 
@@ -64,14 +67,18 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
+
+
 function Header({ children }) {
+
+
 
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
-      color="secondary"
-        // style={{ background: 'transparent', boxShadow: 'none'}}
+        color="secondary"
+        style={{ background: 'transparent', boxShadow: 'none' }}
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
@@ -79,15 +86,6 @@ function Header({ children }) {
         }}
       >
         <Toolbar>
-          {/* <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-            <MenuIcon />
-          </IconButton> */}
-
           <IconButton
             size="large"
             edge="start"
@@ -124,15 +122,7 @@ function Header({ children }) {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-haspopup="true"
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
+            <Avatar variant="rounded" src={avater}/>
           </Box>
         </Toolbar>
       </AppBar>
