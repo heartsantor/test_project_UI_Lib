@@ -43,7 +43,7 @@ export default function Home() {
         {
           data && data.map((item, i) => {
             return (
-              <Grid item xs={3} md={3} sm={12} key={i}>
+              <Grid item xs={12} md={3} sm={12} key={i}>
                 <CustromCard
                   icon={item.icon}
                   title={item.title}
