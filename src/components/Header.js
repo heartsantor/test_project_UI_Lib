@@ -10,6 +10,8 @@ import Toolbar from '@material-ui/core/Toolbar';
 
 import Avatar from '@material-ui/core/Avatar';
 
+import { useTheme } from '@material-ui/core/styles';
+
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import CustromDrawer from './CustromDrawer'
@@ -58,11 +60,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-
+const StyleBadge = styled(Badge)(({ theme }) => ({
+  '& span': {
+    height: '14px',
+    fontSize: '0.50rem',
+    padding: '0 3px',
+    top: '-6px',
+    right: '-2px',
+    minHeight: '15px',
+    minWidth: '15px'
+  }
+}));
 
 function Header({ children }) {
 
-
+  const theme = useTheme();
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -78,7 +90,7 @@ function Header({ children }) {
       >
         <Toolbar>
           <IconButton
-          hover='none'
+            hover='none'
             size="large"
             edge="start"
             color="inherit"
@@ -98,9 +110,9 @@ function Header({ children }) {
             />
           </Search>
 
-          <Box sx={{ flexGrow: 1}} />
+          <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <IconButton  aria-label="show 4 new mails" >
+            <IconButton aria-label="show 4 new mails" >
               <Arroecross />
             </IconButton>
             <IconButton
@@ -108,9 +120,9 @@ function Header({ children }) {
               aria-label="show 3 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={3} color="primary" size='small'>
+              <StyleBadge badgeContent={3} color="primary" size='small'>
                 <BellIcon />
-              </Badge>
+              </StyleBadge>
             </IconButton>
             <IconButton
               size="large"
@@ -137,7 +149,7 @@ function Header({ children }) {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { width: drawerWidth, background: '#663399' },
+            '& .MuiDrawer-paper': { width: drawerWidth, background: `${theme.palette.primary.main}` },
           }}
         >
           <CustromDrawer />

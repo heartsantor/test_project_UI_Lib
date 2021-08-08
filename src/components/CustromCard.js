@@ -13,12 +13,17 @@ const StyleCard = styled(Card)(({ theme }) => ({
     cursor: 'pointer',
 }));
 
+const StyleCardWrapper = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center'
+}));
+
 const CustromCard = ({ icon, title, amount, color, colorlight }) => {
 
     return (
         <StyleCard>
             <CardContent>
-                <div className={styles.cardwrapper}>
+                <StyleCardWrapper>
                     <div className={styles.persion} style={{ backgroundColor: colorlight }}>
                         {icon}
                     </div>
@@ -26,7 +31,7 @@ const CustromCard = ({ icon, title, amount, color, colorlight }) => {
                         <p>{title}</p>
                         <span style={{ color: color }}>{amount}</span>
                     </div>
-                </div>
+                </StyleCardWrapper>
             </CardContent>
         </StyleCard>
     )
