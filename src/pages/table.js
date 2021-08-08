@@ -1,9 +1,9 @@
-import Container from '@material-ui/core/Container';
+
 const Table = () => {
     return (
-        <Container>
+        <div>
             <p>This is table page dummy content.</p>
-        </Container>
+        </div>
     )
 }
 
