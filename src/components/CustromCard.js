@@ -16,7 +16,7 @@ const StyleCardWrapper = styled('div')(({ theme }) => ({
     alignItems: 'center',
     '& .persion': {
         padding: '27px 10px',
-        backgroundColor: theme.palette.background.default,
+        backgroundColor: theme.palette.common.white,
         borderRadius: '18px'
     },
     '& .textwrapper': {

@@ -26,7 +26,7 @@ const drawerWidth = 120;
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: '20px',
-  backgroundColor: alpha(theme.palette.common.white, 1),
+  backgroundColor: theme.palette.common.white,
   marginRight: theme.spacing(1),
   marginLeft: 0,
   width: '100%',
@@ -81,7 +81,7 @@ function Header({ children }) {
       <CssBaseline />
       <AppBar
         color="secondary"
-        style={{ background: 'transparent', boxShadow: 'none' }}
+        style={{ background: `${theme.palette.secondary.main}`, boxShadow: 'none' }}
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
