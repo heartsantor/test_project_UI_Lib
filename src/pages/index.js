@@ -5,6 +5,9 @@ import CustromCard from '../components/CustromCard'
 import Grid from '@material-ui/core/Grid';
 
 import PersionIcon from '../assets/icons/PersionIcon'
+import Moneysvg from '../assets/icons/Moneysvg'
+import Graphsvg from '../assets/icons/Graphsvg'
+import Handsvg from '../assets/icons/Handsvg'
 
 const data = [
   {
@@ -15,21 +18,21 @@ const data = [
     colorlight: ''
   },
   {
-    icon: <PersionIcon />,
+    icon: <Handsvg />,
     title: 'Sales',
     amount: '$4021',
     color: '#3981F7',
     colorlight: '#C5DBFF'
   },
   {
-    icon: <PersionIcon />,
+    icon: <Graphsvg />,
     title: 'Orders',
     amount: '80',
     color: '#5DAE49',
     colorlight: '#BCDDB3'
   },
   {
-    icon: <PersionIcon />,
+    icon: <Moneysvg />,
     title: 'Expense',
     amount: '$1200',
     color: '#FFC620',
