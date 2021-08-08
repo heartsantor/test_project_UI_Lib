@@ -14,8 +14,8 @@ const data = [
     icon: <PersionIcon />,
     title: 'New Leds',
     amount: '205',
-    color: '',
-    colorlight: ''
+    color: '#663399',
+    colorlight: '#F2F1FE'
   },
   {
     icon: <Handsvg />,

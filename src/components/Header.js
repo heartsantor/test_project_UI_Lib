@@ -61,7 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const StyleBadge = styled(Badge)(({ theme }) => ({
-  '& span': {
+  '& .MuiBadge-badge': {
     height: '14px',
     fontSize: '0.50rem',
     padding: '0 3px',

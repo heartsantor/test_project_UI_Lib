@@ -2,9 +2,7 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
-import { styled, alpha } from '@material-ui/core/styles';
-
-import styles from '../styles/card.module.css'
+import { styled } from '@material-ui/core/styles';
 
 const StyleCard = styled(Card)(({ theme }) => ({
     margin: '5px 12px',
@@ -15,7 +13,25 @@ const StyleCard = styled(Card)(({ theme }) => ({
 
 const StyleCardWrapper = styled('div')(({ theme }) => ({
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    '& .persion': {
+        padding: '27px 10px',
+        backgroundColor: theme.palette.background.default,
+        borderRadius: '18px'
+    },
+    '& .textwrapper': {
+        marginLeft: '10px',
+        '& p': {
+            fontSize: '14px',
+            lineHeight: '19px',
+            margin: '10px 0'
+        },
+        '& span': {
+            fontSize: '30px',
+            lineHeight: '41px',
+            fontWeight: 'bold',
+        }
+    }
 }));
 
 const CustromCard = ({ icon, title, amount, color, colorlight }) => {
@@ -24,10 +40,10 @@ const CustromCard = ({ icon, title, amount, color, colorlight }) => {
         <StyleCard>
             <CardContent>
                 <StyleCardWrapper>
-                    <div className={styles.persion} style={{ backgroundColor: colorlight }}>
+                    <div className="persion" style={{ backgroundColor: colorlight }}>
                         {icon}
                     </div>
-                    <div className={styles.textwrapper}>
+                    <div className="textwrapper">
                         <p>{title}</p>
                         <span style={{ color: color }}>{amount}</span>
                     </div>
